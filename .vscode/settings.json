@@ -1,0 +1,18 @@
+{
+  "git.autofetch": true,
+  "cSpell.language": "en, ru",
+  "workbench.iconTheme": "material-icon-theme",
+  "[html][css][scss][javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "editor.tabSize": 2,
+  "scm.alwaysShowActions": true,
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.osx": "Git Bash",
+  "terminal.integrated.defaultProfile.linux": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
