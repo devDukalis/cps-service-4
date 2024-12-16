@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $nav-menu-padding;
+}
+
+.header-nav__list-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__list-item-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.main-nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.about-company-container {
+  display: flex;
+  flex-direction: column;
+}
