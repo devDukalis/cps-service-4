@@ -1,0 +1,61 @@
+/* FLEX */
+$nav-menu-padding: 18px 16px;
+$nav-menu-padding-second: 18px 24px;
+
+/* BUTTONS */
+$menu-btn-width: 40px;
+$menu-btn-height: 40px;
+
+/* ICONS */
+$menu-icon-width: 95px;
+$menu-icon-height: 50px;
+
+/* FONTS */
+$fonts: (
+  family: (
+    bold: 'TTLakes-Bold',
+    medium: 'TTLakes-Medium',
+    regular: 'TTLakes-Regular',
+    fallback: 'sans-serif'
+  ),
+  size: (
+    base: 16px,
+    large: 28px,
+    small: 14px
+  ),
+  line-height: (
+    main: 40px,
+    second: 24px,
+    small: 18px
+  ),
+  letter-spacing: (
+    main: -0.6px,
+    second: -0.2px,
+    small: 0.2px
+  ),
+  color: (
+    main: #1b1c21,
+    second: #7e7e82
+  )
+);
+
+/* MAIN */
+$bg-color-main: #f8f8f8;
+$main-padding: 16px;
+$main-second-padding: 32px;
+$item-color-main: #7e7e82;
+$item-height: 34px;
+
+/* HIGHLIGHT */
+$bg-color-second: #ffffff;
+$border-color-main: #b8ffec;
+$border-radius-main: 6px;
+
+/* SCREEN BREAKPOINTS */
+$breakpoints: (
+  zero: 0px,
+  mobile: 320px,
+  tablet: 768px,
+  desktop: 1120px,
+  large-desktop: 1400px
+);
