@@ -1,0 +1,59 @@
+@import '../main/variables.scss';
+@import 'variables.scss';
+
+.main {
+  background-color: $bg-color-main;
+  width: 100%;
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    height: 82px;
+
+    .title-left-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .title-right-container {
+      display: flex;
+      align-items: center;
+
+      &__item:not(:last-child) {
+        display: flex;
+        margin-right: 32px;
+      }
+
+      &__item-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__item-image {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__title-image {
+    width: 4px;
+    height: 40px;
+  }
+
+  &__title-heading {
+    margin-left: 16px;
+    font-family: map-get(map-get($fonts, family), bold),
+      map-get(map-get($fonts, family), fallback);
+    color: map-get(map-get($fonts, color), main);
+    font-size: map-get(map-get($fonts, size), large);
+    line-height: map-get(map-get($fonts, line-height), main);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), main);
+  }
+
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 32px;
+  }
+}

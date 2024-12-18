@@ -1,0 +1,41 @@
+.nav-services {
+  display: flex;
+  height: 60px;
+  margin-bottom: 24px;
+
+  &__list {
+    padding-left: 18px;
+    padding-right: 18px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  &__list-item {
+    height: $item-height;
+    padding-left: $main-padding;
+    padding-right: $main-padding;
+    white-space: nowrap;
+    display: flex;
+
+    &:hover {
+      background-color: $bg-color-second;
+      border-radius: $border-radius-main;
+      outline: 2px solid $border-color-main;
+    }
+  }
+
+  .active {
+    background-color: $bg-color-second;
+    border-radius: $border-radius-main;
+    outline: 2px solid $border-color-main;
+  }
+
+  &__list-item-btn {
+    font-family: map-get(map-get($fonts, family), medium),
+      map-get(map-get($fonts, family), fallback);
+    color: map-get(map-get($fonts, color), second);
+    font-size: map-get(map-get($fonts, size), medium);
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+  }
+}

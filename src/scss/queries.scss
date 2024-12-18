@@ -1,15 +1,15 @@
 @import 'variables.scss';
 
 /* HIDDEN */
-@media (min-width: 1px) and (max-width: 767px) {
-  .divider.hidden {
-    display: none;
-  }
-}
+.divider {
+  &.hidden {
+    @media (min-width: 1px) and (max-width: 767px) {
+      display: none;
+    }
 
-@media (min-width: 768px) {
-  .divider.hidden {
-    display: flex;
+    @media (min-width: 768px) {
+      display: flex;
+    }
   }
 }
 
@@ -20,19 +20,23 @@
     padding: $nav-menu-padding-second;
   }
 
-  .header-nav__list-item-right .visually-hidden:nth-of-type(-n + 3) {
-    display: block;
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    border: initial;
-    padding: initial;
-    white-space: normal;
-    clip-path: none;
-    clip: auto;
-    overflow: visible;
-    margin-right: 16px;
+  .header-nav__list-item-right {
+    .visually-hidden {
+      &:nth-of-type(-n + 3) {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        border: initial;
+        padding: initial;
+        white-space: normal;
+        clip-path: none;
+        clip: auto;
+        overflow: visible;
+        margin-right: 16px;
+      }
+    }
   }
 
   /* MAIN */

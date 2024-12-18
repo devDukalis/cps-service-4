@@ -5,17 +5,19 @@
   align-items: center;
   justify-content: space-between;
   padding: $nav-menu-padding;
-}
 
-.header-nav__list-item-left {
-  display: flex;
-  align-items: center;
-}
+  .header-nav {
+    &__list-item-left {
+      display: flex;
+      align-items: center;
+    }
 
-.header-nav__list-item-right {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+    &__list-item-right {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+  }
 }
 
 .main-nav-container {
