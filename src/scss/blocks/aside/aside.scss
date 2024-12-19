@@ -1,0 +1,84 @@
+.aside {
+  width: 320px;
+  height: 100%;
+  // transform: translateX(-320px);
+
+  .aside-header {
+    .aside-header-list {
+      &__item-btn {
+        display: flex;
+      }
+    }
+
+    .aside-header-list-container > :nth-child(1) {
+      margin-right: 16px;
+    }
+
+    .aside-header-list-container > :nth-child(2) {
+      margin-right: 75px;
+    }
+  }
+
+  .aside-nav {
+    .aside-nav-list {
+      &__item {
+        height: 32px;
+        display: flex;
+      }
+
+      &__item-btn {
+        font-family: map-get(map-get($fonts, family), medium);
+        color: map-get(map-get($fonts, color), main);
+        font-size: map-get(map-get($fonts, size), medium);
+        line-height: map-get(map-get($fonts, line-height), second);
+        letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .aside-footer {
+    .aside-footer-contacts {
+      .aside-footer-contacts-options {
+        height: 40px;
+
+        &__btn {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .aside-footer-contacts-mail {
+        &__link {
+          font-family: map-get(map-get($fonts, family), medium);
+          color: map-get(map-get($fonts, color), main);
+          font-size: map-get(map-get($fonts, size), medium);
+          line-height: map-get(map-get($fonts, line-height), second);
+          letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+        }
+      }
+      .aside-footer-contacts-phone {
+        margin-bottom: 24px;
+
+        &__link {
+          font-family: map-get(map-get($fonts, family), bold);
+          color: map-get(map-get($fonts, color), main);
+          font-size: map-get(map-get($fonts, size), big);
+          line-height: map-get(map-get($fonts, line-height), main);
+          letter-spacing: map-get(map-get($fonts, letter-spacing), main);
+        }
+      }
+      .aside-footer-contacts-lang {
+        margin-bottom: 32px;
+
+        &__link {
+          font-family: map-get(map-get($fonts, family), medium);
+          color: map-get(map-get($fonts, color), main);
+          font-size: map-get(map-get($fonts, size), medium);
+          line-height: map-get(map-get($fonts, line-height), second);
+          letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+        }
+      }
+    }
+  }
+}

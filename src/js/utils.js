@@ -52,3 +52,54 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 })
+
+/* TOGGLE BURGER MENU */
+document.addEventListener('DOMContentLoaded', function () {
+  const burgerMenu = document.getElementById('burger')
+  const burgerBtnOpen = document.getElementById('open-burger-menu-btn')
+  const burgerBtnClose = document.getElementById('close-burger-menu-btn')
+  const overlay = document.getElementById('overlay')
+
+  function openMenu() {
+    const width = window.innerWidth
+    if (width >= 1120) {
+      burgerMenu.style.transform = 'translateX(0)'
+      overlay.classList.add('active')
+    } else {
+      burgerMenu.style.transform = 'translateX(-320px)'
+      setTimeout(() => {
+        burgerMenu.style.transform = 'translateX(0)'
+      }, 10)
+      overlay.classList.add('active')
+    }
+    burgerMenu.classList.add('active')
+  }
+
+  function closeMenu() {
+    burgerMenu.style.transform = 'translateX(-320px)'
+    burgerMenu.classList.remove('active')
+    overlay.classList.remove('active')
+  }
+
+  burgerBtnOpen.addEventListener('click', openMenu)
+
+  burgerBtnClose.addEventListener('click', closeMenu)
+
+  overlay.addEventListener('click', closeMenu)
+
+  window.addEventListener('resize', function () {
+    const width = window.innerWidth
+
+    if (width >= 1120) {
+      if (burgerMenu.classList.contains('active')) {
+        closeMenu()
+      }
+      burgerMenu.style.transform = 'translateX(0px)'
+      overlay.classList.remove('active')
+    } else {
+      if (!burgerMenu.classList.contains('active')) {
+        burgerMenu.style.transform = 'translateX(-320px)'
+      }
+    }
+  })
+})
