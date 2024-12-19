@@ -1,5 +1,10 @@
 @import 'variables.scss';
 
+.page-wrapper {
+  display: block;
+}
+
+/* HEADER */
 .menu-container {
   display: flex;
   align-items: center;
@@ -20,6 +25,7 @@
   }
 }
 
+/* MAIN */
 .main-nav-container {
   display: flex;
   align-items: center;
@@ -28,4 +34,58 @@
 .about-company-container {
   display: flex;
   flex-direction: column;
+}
+
+/* BURGER MENU */
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* Учитываем высоту видимой области bottom/top панелей*/
+  height: calc(100vh - env(safe-area-inset-bottom) -env(safe-area-inset-top));
+  overflow-y: auto;
+}
+
+.aside-container > :last-child {
+  margin-top: auto;
+}
+
+.aside-header-container {
+  margin-bottom: 24px;
+}
+
+.aside-header-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+}
+
+.aside-nav-container {
+  margin-bottom: 24px;
+}
+
+.aside-nav-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  gap: 24px;
+}
+
+.aside-footer-container {
+  padding: 0 24px;
+}
+
+.aside-footer-contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aside-footer-contacts-options-container {
+  display: flex;
+  gap: 16px;
 }

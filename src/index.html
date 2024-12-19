@@ -14,132 +14,218 @@
 </head>
 
 <body>
-  <header class="header" id="header">
-    <nav class="header-nav">
-      <ul class="header-nav__list list-reset menu-container">
-        <li class="header-nav__list-item">
-          <ul class="header-nav__list-item-left list-reset">
-            <li class="header-nav__list-item-left-element">
-              <button class="btn-reset header-nav__list-item-left-element-btn">
-                <img src="/src/img/burger.svg" alt="Открыть меню" />
-              </button>
-            </li>
-            <li class="header-nav__list-item-left-element divider hidden">
-              <img src="/src/img/divider.svg" alt="Разделитель меню"
-                class="header-nav__list-item-left-element-image-divider" />
-            </li>
-            <li class="header-nav__list-item-left-element">
-              <a href=""><img src="/src/img/cps.svg" alt="Иконка логотипа компании CPS"
-                  class="header-nav__list-item-left-element-icon" /></a>
-            </li>
-          </ul>
-        </li>
+  <div id="overlay" class="overlay"></div>
 
-        <li class="header-nav__list-item">
-          <ul class="header-nav__list-item-right list-reset">
-            <li class="header-nav__list-item-right-element visually-hidden">
-              <button class="btn-reset header-nav__list-item-right-element-btn">
-                <img src="/src/img/call.svg" alt="Звонок" />
-              </button>
-            </li>
-            <li class="header-nav__list-item-right-element visually-hidden">
-              <button class="btn-reset header-nav__list-item-right-element-btn">
-                <img src="/src/img/chat.svg" alt="Чат" />
-              </button>
-            </li>
-            <li class="header-nav__list-item-right-element visually-hidden">
-              <button class="btn-reset header-nav__list-item-right-element-btn">
-                <img src="/src/img/profile.svg" alt="Профиль" />
-              </button>
-            </li>
-            <li class="header-nav__list-item-right-element item divider">
-              <img src="/src/img/divider.svg" alt="Разделитель меню"
-                class="header-nav__list-item-right-element-image-divider" />
-            </li>
-            <li class="header-nav__list-item-right-element">
-              <button class="btn-reset header-nav__list-item-right-element-btn">
-                <img src="/src/img/repair.svg" alt="Оставить заявку" />
-              </button>
-            </li>
-            <li class="header-nav__list-item-right-element">
-              <button class="btn-reset header-nav__list-item-right-element-btn">
-                <img src="/src/img/check-status.svg" alt="Статус ремонта" />
-              </button>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div class="page-wrapper">
+    <aside class="aside aside-container box-shadow burger-menu" id="burger">
+      <header class="aside-header aside-header-container">
+        <ul class="aside-header-list list-reset aside-header-list-container">
+          <li class="aside-header-list__item">
+            <button class="aside-header-list__item-btn btn-reset">
+              <img src="/src/img/burger-close.svg" alt="Закрыть меню" class="aside-header-list__item-btn-img"
+                id="close-burger-menu-btn">
+            </button>
+          </li>
+          <li class="aside-header-list__item">
+            <a href="" class="aside-header-list__item-link anchor-reset">
+              <img src="/src/img/cps.svg" alt="Иконка логотипа компании CPS" class="aside-header-list__item-link-img">
+            </a>
+          </li>
+          <li class="aside-header-list__item">
+            <button class="aside-header-list__item-btn btn-reset">
+              <img src="/src/img/search.svg" alt="Поиск" class="aside-header-list__item-btn-img">
+            </button>
+          </li>
+        </ul>
+      </header>
 
-  <main class="main">
-    <div class="main__title-wrapper title-container">
-      <div class="title-left-container">
-        <img src="/src/img/highlight.svg" alt="Выделить заголовок" class="main__title-image" />
-        <h1 class="main__title-heading">Услуги и сервисы</h1>
-      </div>
+      <nav class="aside-nav aside-nav-container">
+        <ul class="aside-nav-list list-reset aside-nav-list-container">
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Ремонт техники</button>
+          </li>
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Услуги и сервисы</button>
+          </li>
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Корпоративным клиентам</button>
+          </li>
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Продавцам техники</button>
+          </li>
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Партнерам</button>
+          </li>
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Производителям</button>
+          </li>
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Наши сервисные центры</button>
+          </li>
+          <li class="aside-nav-list__item">
+            <button class="aside-nav-list__item-btn btn-reset">Контакты</button>
+          </li>
+        </ul>
+      </nav>
 
-      <div class="title-right-container" id="title-right-container">
-        <div class="title-right-container__item">
-          <button class="btn-reset title-right-container__item-btn">Оставить заявку
-            <img src="/src/img/repair.svg" alt="Оставить заявку" class="title-right-container__item-image">
-          </button>
+      <footer class="aside-footer aside-footer-container">
+        <div class="aside-footer-contacts aside-footer-contacts-container">
+          <div class="aside-footer-contacts-options aside-footer-contacts-options-container">
+            <button class="aside-footer-contacts-options__btn btn-reset">
+              <img src="/src/img/call.svg" alt="Звонок" class="aside-footer-contacts-options__btn-img">
+            </button>
+            <button class="aside-footer-contacts-options__btn btn-reset">
+              <img src="/src/img/chat.svg" alt="Чат" class="aside-footer-contacts-options__btn-img">
+            </button>
+            <button class="aside-footer-contacts-options__btn btn-reset">
+              <img src="/src/img/profile.svg" alt="Профиль" class="aside-footer-contacts-options__btn-img">
+            </button>
+          </div>
+
+          <div class="aside-footer-contacts-mail">
+            <a href="mailto:mail@cps.com" class="aside-footer-contacts-mail__link anchor-reset">mail@cps.com</a>
+          </div>
+
+          <div class="aside-footer-contacts-phone">
+            <a href="tel:88008808900" class="aside-footer-contacts-phone__link anchor-reset">8 800 890 8900</a>
+          </div>
+
+          <div class="aside-footer-contacts-lang">
+            <a href="index.html?lang=ru" class="aside-footer-contacts-lang__link anchor-reset active-lang">RU</a>
+            <a href="index.html?lang=en" class="aside-footer-contacts-lang__link anchor-reset">EN</a>
+            <a href="index.html?lang=ch" class="aside-footer-contacts-lang__link anchor-reset">CH</a>
+          </div>
         </div>
-        <div class="title-right-container__item">
-          <button class="btn-reset title-right-container__item-btn">Статус ремонта
-            <img src="/src/img/check-status.svg" alt="Статус ремонта" class="title-right-container__item-image">
-          </button>
+      </footer>
+    </aside>
+
+    <header class="header" id="header">
+      <nav class="header-nav">
+        <ul class="header-nav__list list-reset menu-container">
+          <li class="header-nav__list-item">
+            <ul class="header-nav__list-item-left list-reset">
+              <li class="header-nav__list-item-left-element">
+                <button class="btn-reset header-nav__list-item-left-element-btn" id="open-burger-menu-btn">
+                  <img src="/src/img/burger.svg" alt="Открыть меню" />
+                </button>
+              </li>
+              <li class="header-nav__list-item-left-element divider hidden">
+                <img src="/src/img/divider.svg" alt="Разделитель меню"
+                  class="header-nav__list-item-left-element-image-divider" />
+              </li>
+              <li class="header-nav__list-item-left-element">
+                <a href=""><img src="/src/img/cps.svg" alt="Иконка логотипа компании CPS"
+                    class="header-nav__list-item-left-element-icon" /></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="header-nav__list-item">
+            <ul class="header-nav__list-item-right list-reset">
+              <li class="header-nav__list-item-right-element visually-hidden">
+                <button class="btn-reset header-nav__list-item-right-element-btn">
+                  <img src="/src/img/call.svg" alt="Звонок" />
+                </button>
+              </li>
+              <li class="header-nav__list-item-right-element visually-hidden">
+                <button class="btn-reset header-nav__list-item-right-element-btn">
+                  <img src="/src/img/chat.svg" alt="Чат" />
+                </button>
+              </li>
+              <li class="header-nav__list-item-right-element visually-hidden">
+                <button class="btn-reset header-nav__list-item-right-element-btn">
+                  <img src="/src/img/profile.svg" alt="Профиль" />
+                </button>
+              </li>
+              <li class="header-nav__list-item-right-element item divider">
+                <img src="/src/img/divider.svg" alt="Разделитель меню"
+                  class="header-nav__list-item-right-element-image-divider" />
+              </li>
+              <li class="header-nav__list-item-right-element">
+                <button class="btn-reset header-nav__list-item-right-element-btn">
+                  <img src="/src/img/repair.svg" alt="Оставить заявку" />
+                </button>
+              </li>
+              <li class="header-nav__list-item-right-element">
+                <button class="btn-reset header-nav__list-item-right-element-btn">
+                  <img src="/src/img/check-status.svg" alt="Статус ремонта" />
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="main__title-wrapper title-container">
+        <div class="title-left-container">
+          <img src="/src/img/highlight.svg" alt="Выделить заголовок" class="main__title-image" />
+          <h1 class="main__title-heading">Услуги и сервисы</h1>
+        </div>
+
+        <div class="title-right-container" id="title-right-container">
+          <div class="title-right-container__item">
+            <button class="btn-reset title-right-container__item-btn">Оставить заявку
+              <img src="/src/img/repair.svg" alt="Оставить заявку" class="title-right-container__item-image">
+            </button>
+          </div>
+          <div class="title-right-container__item">
+            <button class="btn-reset title-right-container__item-btn">Статус ремонта
+              <img src="/src/img/check-status.svg" alt="Статус ремонта" class="title-right-container__item-image">
+            </button>
+          </div>
         </div>
       </div>
 
-    </div>
+      <nav class="nav-services">
+        <ul class="nav-services__list list-reset main-nav-container">
+          <li class="nav-services__list-item active">
+            <button class="btn-reset nav-services__list-item-btn">Ремонтируемые бренды</button>
+          </li>
+          <li class="nav-services__list-item">
+            <button class="btn-reset nav-services__list-item-btn">Ремонтируемые устройства</button>
+          </li>
+          <li class="nav-services__list-item">
+            <button class="btn-reset nav-services__list-item-btn">Цены на услуги</button>
+          </li>
+          <li class="nav-services__list-item">
+            <button class="btn-reset nav-services__list-item-btn">Адреса сервисных центров</button>
+          </li>
+          <li class="nav-services__list-item">
+            <button class="btn-reset nav-services__list-item-btn">Специальные цены</button>
+          </li>
+          <li class="nav-services__list-item">
+            <button class="btn-reset nav-services__list-item-btn">Отзывы</button>
+          </li>
+        </ul>
+      </nav>
 
-    <nav class="nav-services">
-      <ul class="nav-services__list list-reset main-nav-container">
-        <li class="nav-services__list-item active">
-          <button class="btn-reset nav-services__list-item-btn">Ремонтируемые бренды</button>
-        </li>
-        <li class="nav-services__list-item">
-          <button class="btn-reset nav-services__list-item-btn">Ремонтируемые устройства</button>
-        </li>
-        <li class="nav-services__list-item">
-          <button class="btn-reset nav-services__list-item-btn">Цены на услуги</button>
-        </li>
-        <li class="nav-services__list-item">
-          <button class="btn-reset nav-services__list-item-btn">Адреса сервисных центров</button>
-        </li>
-        <li class="nav-services__list-item">
-          <button class="btn-reset nav-services__list-item-btn">Специальные цены</button>
-        </li>
-        <li class="nav-services__list-item">
-          <button class="btn-reset nav-services__list-item-btn">Отзывы</button>
-        </li>
-      </ul>
-    </nav>
+      <div class="about-company about-company-container">
+        <div class="about-company__info-block">
+          <p class="about-company__info-block-text" id="visible-text">Мы являемся авторизованным сервисным центром
+            по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+            производителя.
+          </p>
+          <p class="about-company__info-block-text" id="hidden-text">Мы успешно работаем с 1992 года и заслужили
+            репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что
+            к
+            нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
 
-    <div class="about-company about-company-container">
-      <div class="about-company__info-block">
-        <p class="about-company__info-block-text" id="visible-text">Мы являемся авторизованным сервисным центром
-          по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
-          производителя.
-        </p>
-        <p class="about-company__info-block-text" id="hidden-text">Мы успешно работаем с 1992 года и заслужили
-          репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к
-          нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+          <div class="about-company__info-block-read-next">
+            <span class="about-company__info-block-read-next-image">
+              <img src="/src/img/arrow-down.svg" alt="Разделитель главного заголовка" />
+            </span>
+            <button id="read-next" class="btn-reset about-company__info-block-read-next-btn">Скрыть</button>
+          </div>
+        </div>
 
-        <div class="about-company__info-block-read-next">
-          <span class="about-company__info-block-read-next-image">
-            <img src="/src/img/arrow-down.svg" alt="Разделитель главного заголовка" />
-          </span>
-          <button id="read-next" class="btn-reset about-company__info-block-read-next-btn">Скрыть</button>
+        <div class="about-company__image-block">
+          <img src="/src/img/logo-picture.jpg" alt="Логотип компании CPS" class="about-company__image" />
         </div>
       </div>
-
-      <div class="about-company__image-block">
-        <img src="/src/img/logo-picture.jpg" alt="Логотип компании CPS" class="about-company__image" />
-      </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </body>
 
 </html>

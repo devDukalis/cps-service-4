@@ -1,0 +1,111 @@
+/* BOX-SHADOW */
+.box-shadow {
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px rgba(69, 79, 126, 0.02);
+}
+
+/* COLOR */
+.active-lang {
+  color: map-get(map-get($fonts, color), second);
+}
+
+/* HOVERING WITH BACKGROUND-IMAGE DISPLAYED */
+.aside-nav-list__item {
+  position: relative;
+}
+
+.aside-nav-list__item-btn:hover {
+  color: var(--font-second-color);
+}
+
+.aside-nav-list__item-btn:hover::before {
+  content: '';
+  position: absolute;
+  background-image: url('../img/highlight.svg');
+  width: 4px;
+  height: 32px;
+  transform: translateX(-24px);
+}
+
+/* HOVERING WITH BUTTON SCALED */
+.aside-header-list__item-btn,
+.aside-footer-contacts-options__btn,
+.header-nav__list-item-left-element-btn,
+.header-nav__list-item-right-element-btn,
+.title-right-container__item-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.aside-header-list__item-btn:hover,
+.aside-footer-contacts-options__btn:hover,
+.header-nav__list-item-left-element-btn:hover,
+.header-nav__list-item-right-element-btn:hover,
+.title-right-container__item-image:hover {
+  transform: scale(1.2);
+}
+
+/* HOVERING WITH IMAGE SATURATED */
+.aside-header-list__item-link-img,
+.header-nav__list-item-left-element-icon {
+  transition: filter 0.3s ease-in-out;
+  filter: saturate(0);
+}
+
+.aside-header-list__item-link-img:hover,
+.header-nav__list-item-left-element-icon:hover {
+  filter: saturate(250%);
+}
+
+/* HOVERING WITH LINK SHIFTED TO THE RIGHT */
+.aside-footer-contacts-mail__link,
+.aside-footer-contacts-phone__link {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.aside-footer-contacts-mail__link:hover,
+.aside-footer-contacts-phone__link:hover {
+  transform: translateX(10px);
+}
+
+/* HOVERING WITH LINK SCALED AND SHIFTED TO THE TOP */
+.aside-footer-contacts-lang__link {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.aside-footer-contacts-lang__link:hover {
+  transform: scale(1.2) translateY(-10px);
+}
+
+/* BURGER */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  z-index: 100;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100%;
+  background: white;
+  transform: translateX(-320px);
+  transition: transform 0.3s ease;
+  z-index: 200;
+}
+
+.burger-menu.active {
+  transform: translateX(0);
+}
+
+.overlay.active {
+  display: block;
+}
