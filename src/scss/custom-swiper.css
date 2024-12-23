@@ -1,0 +1,23 @@
+.swiper-slide {
+  flex-shrink: 1;
+  position: relative;
+  transition-property: transform;
+  display: flex;
+  height: 72px;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #dddddd;
+  margin: 0 12px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}

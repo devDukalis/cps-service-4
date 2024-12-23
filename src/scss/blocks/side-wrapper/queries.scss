@@ -1,0 +1,5 @@
+#main-section-wrapper {
+  @include respond-to(desktop) {
+    flex-basis: calc(100% - 320px);
+  }
+}

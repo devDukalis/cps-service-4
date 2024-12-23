@@ -1,4 +1,7 @@
 .aside {
+  @include respond-to(desktop) {
+    flex-basis: 320px;
+  }
   .aside-header-list-container {
     & > :nth-child(1) {
       @include respond-to(desktop) {

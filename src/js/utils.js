@@ -103,3 +103,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 })
+
+/* TOGGLE IMAGE ROTATION */
+function toggleImageRotation() {
+  const image = document.getElementById('toggle-list-image')
+  const img = document.getElementById('read-next-image')
+
+  // Проверяем текущее состояние кнопки и меняем стиль изображения
+  if (
+    image.style.transform === 'rotate(180deg)' ||
+    img.style.transform === 'rotate(180deg)'
+  ) {
+    image.style.transform = 'rotate(0deg)' // Возвращаем в исходное состояние
+    img.style.transform = 'rotate(0deg)'
+  } else {
+    image.style.transform = 'rotate(180deg)' // Поворачиваем на 180 градусов
+    img.style.transform = 'rotate(180deg)'
+  }
+}
+
+document
+  .getElementById('toggle-btn-slides')
+  .addEventListener('click', toggleImageRotation)
+
+document
+  .getElementById('read-next')
+  .addEventListener('click', toggleImageRotation)

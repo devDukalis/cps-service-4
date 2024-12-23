@@ -156,74 +156,255 @@
       </nav>
     </header>
 
-    <main class="main">
-      <div class="main__title-wrapper title-container">
-        <div class="title-left-container">
-          <img src="./img/highlight.svg" alt="Выделить заголовок" class="main__title-image">
-          <h1 class="main__title-heading">Услуги и сервисы</h1>
+    <div id="side-wrapper">
+      <main class="main">
+        <div class="main__title-wrapper title-container">
+          <div class="title-left-container">
+            <img src="./img/highlight.svg" alt="Выделить заголовок" class="main__title-image">
+            <h1 class="main__title-heading">Услуги и сервисы</h1>
+          </div>
+
+          <div class="title-right-container" id="title-right-container">
+            <div class="title-right-container__item">
+              <button class="btn-reset title-right-container__item-btn">Оставить заявку
+                <img src="./img/repair.svg" alt="Оставить заявку" class="title-right-container__item-image">
+              </button>
+            </div>
+            <div class="title-right-container__item">
+              <button class="btn-reset title-right-container__item-btn">Статус ремонта
+                <img src="./img/check-status.svg" alt="Статус ремонта" class="title-right-container__item-image">
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="title-right-container" id="title-right-container">
-          <div class="title-right-container__item">
-            <button class="btn-reset title-right-container__item-btn">Оставить заявку
-              <img src="./img/repair.svg" alt="Оставить заявку" class="title-right-container__item-image">
-            </button>
+        <nav class="nav-services">
+          <ul class="nav-services__list list-reset main-nav-container">
+            <li class="nav-services__list-item active">
+              <button class="btn-reset nav-services__list-item-btn">Ремонтируемые бренды</button>
+            </li>
+            <li class="nav-services__list-item">
+              <button class="btn-reset nav-services__list-item-btn">Ремонтируемые устройства</button>
+            </li>
+            <li class="nav-services__list-item">
+              <button class="btn-reset nav-services__list-item-btn">Цены на услуги</button>
+            </li>
+            <li class="nav-services__list-item">
+              <button class="btn-reset nav-services__list-item-btn">Адреса сервисных центров</button>
+            </li>
+            <li class="nav-services__list-item">
+              <button class="btn-reset nav-services__list-item-btn">Специальные цены</button>
+            </li>
+            <li class="nav-services__list-item">
+              <button class="btn-reset nav-services__list-item-btn">Отзывы</button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="about-company about-company-container">
+          <div class="about-company__info-block">
+            <p class="about-company__info-block-text" id="visible-text">Мы являемся авторизованным сервисным центром
+              по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+              производителя.
+            </p>
+            <p class="about-company__info-block-text" id="hidden-text">Мы успешно работаем с 1992 года и заслужили
+              репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем,
+              что
+              к
+              нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+
+            <div class="about-company__info-block-read-next">
+              <span class="about-company__info-block-read-next-image">
+                <img src="./img/arrow-down.svg" alt="Разделитель главного заголовка" id="read-next-image"
+                  class="about-company__info-block-read-next-image-divider">
+              </span>
+              <button id="read-next" class="btn-reset about-company__info-block-read-next-btn">Скрыть</button>
+            </div>
           </div>
-          <div class="title-right-container__item">
-            <button class="btn-reset title-right-container__item-btn">Статус ремонта
-              <img src="./img/check-status.svg" alt="Статус ремонта" class="title-right-container__item-image">
-            </button>
+
+          <div class="about-company__image-block">
+            <img src="./img/logo-picture.jpg" alt="Логотип компании CPS" class="about-company__image">
           </div>
         </div>
-      </div>
+      </main>
 
-      <nav class="nav-services">
-        <ul class="nav-services__list list-reset main-nav-container">
-          <li class="nav-services__list-item active">
-            <button class="btn-reset nav-services__list-item-btn">Ремонтируемые бренды</button>
+      <section class="brands-section swiper">
+        <h2 class="brands-section__heading ">
+          Ремонт техники различных брендов
+        </h2>
+
+        <ul class="brands-section__list list-reset container swiper-wrapper grid">
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/lenovo.png" alt="Логотип lenovo" class="brands-section__list-item-lenovo-logo">
+            <a href="https://www.lenovo.com/ru/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда lenovo" class="brands-section__list-item-link-img">
+            </a>
           </li>
-          <li class="nav-services__list-item">
-            <button class="btn-reset nav-services__list-item-btn">Ремонтируемые устройства</button>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/samsung.png" alt="Логотип samsung" class="brands-section__list-item-samsung-logo">
+            <a href="https://www.samsung.com/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда samsung" class="brands-section__list-item-link-img">
+            </a>
           </li>
-          <li class="nav-services__list-item">
-            <button class="btn-reset nav-services__list-item-btn">Цены на услуги</button>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/apple.png" alt="Логотип apple" class="brands-section__list-item-apple-logo">
+            <a href="https://www.apple.com" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда apple" class="brands-section__list-item-link-img">
+            </a>
           </li>
-          <li class="nav-services__list-item">
-            <button class="btn-reset nav-services__list-item-btn">Адреса сервисных центров</button>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/viewsonic.png" alt="Логотип viewsonic" class="brands-section__list-item-viewsonic-logo">
+            <a href="https://www.viewsonic.com/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда viewsonic" class="brands-section__list-item-link-img">
+            </a>
           </li>
-          <li class="nav-services__list-item">
-            <button class="btn-reset nav-services__list-item-btn">Специальные цены</button>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/bosh.png" alt="Логотип bosh" class="brands-section__list-item-bosh-logo">
+            <a href="https://bosch-centre.ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда bosh" class="brands-section__list-item-link-img">
+            </a>
           </li>
-          <li class="nav-services__list-item">
-            <button class="btn-reset nav-services__list-item-btn">Отзывы</button>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/hp.png" alt="Логотип hp" class="brands-section__list-item-hp-logo">
+            <a href="https://www.hp.com/kz-ru/home.html" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда hp" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/acer.png" alt="Логотип acer" class="brands-section__list-item-acer-logo">
+            <a href="https://www.acer.com/ru-ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда acer" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/sony.png" alt="Логотип sony" class="brands-section__list-item-sony-logo">
+            <a href="https://www.sony.ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда sony" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/lenovo.png" alt="Логотип lenovo" class="brands-section__list-item-lenovo-logo">
+            <a href="https://www.lenovo.com/ru/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда lenovo" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/samsung.png" alt="Логотип samsung" class="brands-section__list-item-samsung-logo">
+            <a href="https://www.samsung.com/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда samsung" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/apple.png" alt="Логотип apple" class="brands-section__list-item-apple-logo">
+            <a href="https://www.apple.com" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда apple" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/lenovo.png" alt="Логотип lenovo" class="brands-section__list-item-lenovo-logo">
+            <a href="https://www.lenovo.com/ru/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда lenovo" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/samsung.png" alt="Логотип samsung" class="brands-section__list-item-samsung-logo">
+            <a href="https://www.samsung.com/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда samsung" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/apple.png" alt="Логотип apple" class="brands-section__list-item-apple-logo">
+            <a href="https://www.apple.com" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда apple" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/viewsonic.png" alt="Логотип viewsonic" class="brands-section__list-item-viewsonic-logo">
+            <a href="https://www.viewsonic.com/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда viewsonic" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/bosh.png" alt="Логотип bosh" class="brands-section__list-item-bosh-logo">
+            <a href="https://bosch-centre.ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда bosh" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/hp.png" alt="Логотип hp" class="brands-section__list-item-hp-logo">
+            <a href="https://www.hp.com/kz-ru/home.html" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда hp" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/acer.png" alt="Логотип acer" class="brands-section__list-item-acer-logo">
+            <a href="https://www.acer.com/ru-ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда acer" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/sony.png" alt="Логотип sony" class="brands-section__list-item-sony-logo">
+            <a href="https://www.sony.ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда sony" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/lenovo.png" alt="Логотип lenovo" class="brands-section__list-item-lenovo-logo">
+            <a href="https://www.lenovo.com/ru/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда lenovo" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/samsung.png" alt="Логотип samsung" class="brands-section__list-item-samsung-logo">
+            <a href="https://www.samsung.com/ru" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда samsung" class="brands-section__list-item-link-img">
+            </a>
+          </li>
+          <li class="brands-section__list-item container-item swiper-slide">
+            <img src="./img/apple.png" alt="Логотип apple" class="brands-section__list-item-apple-logo">
+            <a href="https://www.apple.com" target="_blank" rel="noopener"
+              class="brands-section__list-item-link anchor-reset">
+              <img src="./img/go.svg" alt="Перейти на сайт бренда apple" class="brands-section__list-item-link-img">
+            </a>
           </li>
         </ul>
-      </nav>
 
-      <div class="about-company about-company-container">
-        <div class="about-company__info-block">
-          <p class="about-company__info-block-text" id="visible-text">Мы являемся авторизованным сервисным центром
-            по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
-            производителя.
-          </p>
-          <p class="about-company__info-block-text" id="hidden-text">Мы успешно работаем с 1992 года и заслужили
-            репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что
-            к
-            нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+        <div class="brands-section__pagination swiper-pagination" id="swiper-pagination-block"></div>
 
-          <div class="about-company__info-block-read-next">
-            <span class="about-company__info-block-read-next-image">
-              <img src="./img/arrow-down.svg" alt="Разделитель главного заголовка">
-            </span>
-            <button id="read-next" class="btn-reset about-company__info-block-read-next-btn">Скрыть</button>
-          </div>
+        <div class="brands-section__toggle-list-block" id="toggle-slides-btn-block">
+          <span class="brands-section__toggle-list-block-img-wrapper">
+            <img src="./img/arrow-down.svg" alt="Разделитель кнопки скрытия или раскрытия списка брендов"
+              class="brands-section__toggle-list-block-divider" id="toggle-list-image">
+          </span>
+
+          <button class="brands-section__toggle-list-block-btn btn-reset" id="toggle-btn-slides">
+            Скрыть
+          </button>
         </div>
+      </section>
+    </div>
 
-        <div class="about-company__image-block">
-          <img src="./img/logo-picture.jpg" alt="Логотип компании CPS" class="about-company__image">
-        </div>
-      </div>
-    </main>
   </div>
 </body>
 
