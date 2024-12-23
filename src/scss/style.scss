@@ -3,12 +3,19 @@
 @import 'fonts.scss';
 @import 'flex.scss';
 @import 'mixins.scss';
+@import 'effects';
 
+@import 'blocks/page-wrapper/page-wrapper.scss';
+@import 'blocks/aside/aside.scss';
 @import 'blocks/header/header.scss';
 @import 'blocks/main/main.scss';
 @import 'blocks/nav-services/nav-services.scss';
 @import 'blocks/about-company/about-company.scss';
-@import 'blocks/aside/aside.scss';
+
+@import 'blocks/page-wrapper/queries.scss';
+@import 'blocks/aside/queries.scss';
+@import 'blocks/header/queries.scss';
+@import 'blocks/main/queries.scss';
+@import 'blocks/about-company/queries.scss';
 
 @import 'queries.scss';
-@import 'effects';

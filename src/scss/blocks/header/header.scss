@@ -4,16 +4,16 @@
   width: 100%;
   height: 90px;
 
-  &-nav {
+  .header-nav {
     width: 100%;
     height: 89px;
     border-bottom: $border-bottom;
 
     &__list {
-      &-item {
-        &-left {
-          &-element {
-            &-btn {
+      .header-nav__list-item {
+        .header-nav__list-item-left {
+          .header-nav__list-item-left-element {
+            .header-nav__list-item-left-element-btn {
               width: $menu-btn-width;
               height: $menu-btn-height;
             }
@@ -24,9 +24,9 @@
           }
         }
 
-        &-right {
-          &-element {
-            &-btn {
+        .header-nav__list-item-right {
+          .header-nav__list-item-right-element {
+            .header-nav__list-item-right-element-btn {
               width: $menu-btn-width;
               height: $menu-btn-height;
             }

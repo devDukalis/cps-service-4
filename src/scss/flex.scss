@@ -44,8 +44,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  /* Учитываем высоту видимой области bottom/top панелей*/
-  height: calc(100vh - env(safe-area-inset-bottom) -env(safe-area-inset-top));
+  height: $mobile-panel-height;
   overflow-y: auto;
 }
 

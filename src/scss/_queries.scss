@@ -1,0 +1,33 @@
+@import 'variables.scss';
+
+/* TOGGLE VISIBILITY OF HEADER DIVIDER*/
+.divider {
+  &.hidden {
+    @include respond-to(mobile) {
+      display: none;
+    }
+
+    @include respond-to(tablet) {
+      display: flex;
+    }
+  }
+}
+
+/* DISPLAY BURGER MENU AT DESKTOP */
+.burger-menu {
+  @include respond-to(desktop) {
+    display: flex;
+    width: 320px;
+    transform: translateX(0px);
+    position: static;
+    transition: transform 0.3s ease;
+    height: $mobile-panel-height;
+    overflow-y: auto;
+  }
+}
+
+.aside-container {
+  @include respond-to(desktop) {
+    flex-shrink: 0;
+  }
+}

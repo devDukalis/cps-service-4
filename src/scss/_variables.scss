@@ -60,3 +60,8 @@ $breakpoints: (
   desktop: 1120px,
   large-desktop: 1400px
 );
+
+/* SAFE HEIGHT OF MOBILE TOP / BOTTOM PANELS */
+$mobile-panel-height: calc(
+  100vh - env(safe-area-inset-bottom) -env(safe-area-inset-top)
+);
