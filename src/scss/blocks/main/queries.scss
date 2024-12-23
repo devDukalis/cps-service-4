@@ -1,0 +1,42 @@
+.main {
+  &__title-wrapper {
+    @include respond-to(tablet) {
+      padding-top: 2px;
+    }
+
+    @include respond-to(desktop) {
+      padding-top: 7px;
+    }
+  }
+
+  &__title-heading {
+    @include respond-to(tablet) {
+      margin-left: 24px;
+    }
+  }
+
+  @include respond-to(desktop) {
+    height: 100vh;
+  }
+
+  .nav-services {
+    &__list {
+      @include respond-to(tablet) {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+    }
+
+    .main-nav-container {
+      @include respond-to(desktop) {
+        flex-wrap: wrap;
+        flex-basis: 95%;
+        min-height: 85px;
+      }
+    }
+
+    @include respond-to(desktop) {
+      margin-bottom: 38px;
+    }
+  }
+}

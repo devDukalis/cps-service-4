@@ -1,0 +1,22 @@
+.about-company-container {
+  @include respond-to(tablet) {
+    flex-direction: row;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 24px;
+  }
+
+  @include respond-to(desktop) {
+    padding-right: 32px;
+    padding-bottom: 50px;
+  }
+}
+
+.about-company {
+  &__image {
+    @include respond-to(tablet) {
+      min-height: 198px;
+      min-width: 360px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.header {
+  .header-nav {
+    &__list {
+      .header-nav__list-item {
+        .header-nav__list-item-right {
+          .visually-hidden {
+            &:nth-of-type(-n + 3) {
+              @include respond-to(tablet) {
+                display: block;
+                position: static;
+                width: auto;
+                height: auto;
+                margin: 0;
+                border: initial;
+                padding: initial;
+                white-space: normal;
+                clip-path: none;
+                clip: auto;
+                overflow: visible;
+                margin-right: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .menu-container {
+      @include respond-to(tablet) {
+        padding: $nav-menu-padding-second;
+      }
+    }
+  }
+}

@@ -9,12 +9,14 @@
       }
     }
 
-    .aside-header-list-container > :nth-child(1) {
-      margin-right: 16px;
-    }
+    .aside-header-list-container {
+      & > :nth-child(1) {
+        margin-right: 16px;
+      }
 
-    .aside-header-list-container > :nth-child(2) {
-      margin-right: 75px;
+      & > :nth-child(2) {
+        margin-right: 75px;
+      }
     }
   }
 

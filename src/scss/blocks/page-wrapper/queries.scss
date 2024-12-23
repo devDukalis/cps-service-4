@@ -1,0 +1,5 @@
+#page-wrapper {
+  @include respond-to(desktop) {
+    display: flex;
+  }
+}
