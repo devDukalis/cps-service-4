@@ -1,21 +1,29 @@
 @import 'normalize.scss';
 @import 'utils.scss';
 @import 'fonts.scss';
+@import 'grid.scss';
 @import 'flex.scss';
+
 @import 'mixins.scss';
 @import 'effects';
+@import 'swiper-bundle.min.css';
+@import 'custom-swiper.css';
 
 @import 'blocks/page-wrapper/page-wrapper.scss';
 @import 'blocks/aside/aside.scss';
 @import 'blocks/header/header.scss';
+@import 'blocks/side-wrapper/side-wrapper.scss';
 @import 'blocks/main/main.scss';
 @import 'blocks/nav-services/nav-services.scss';
 @import 'blocks/about-company/about-company.scss';
+@import 'blocks/brands/brands.scss';
 
 @import 'blocks/page-wrapper/queries.scss';
 @import 'blocks/aside/queries.scss';
 @import 'blocks/header/queries.scss';
+@import 'blocks/side-wrapper/queries.scss';
 @import 'blocks/main/queries.scss';
 @import 'blocks/about-company/queries.scss';
+@import 'blocks/brands/queries.scss';
 
 @import 'queries.scss';

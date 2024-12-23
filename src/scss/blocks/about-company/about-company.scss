@@ -19,14 +19,31 @@
   }
 
   &__info-block-read-next {
-    padding-left: $main-padding;
+    margin-left: $main-padding;
     padding-right: $main-padding;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100px;
+    max-width: 160px;
+
+    &:hover {
+      color: rgba(27, 28, 33, 0.8);
+      box-shadow: 0 0 2px 1px rgba(128, 128, 128, 0.5);
+      border-radius: 3px;
+      width: fit-content;
+      padding-right: 8px;
+    }
   }
 
   &__info-block-read-next-image {
     margin-left: 8px;
     margin-right: 8px;
+
+    .about-company__info-block-read-next-image-divider {
+      transition: transform 0.3s ease;
+    }
   }
 
   &__info-block-read-next-btn {
