@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+import { Navigation, Pagination } from 'swiper/modules'
 
 let swiper
 
@@ -12,6 +13,8 @@ function initSwiperMobile() {
     // Initialize swiper only if it wasn't initialized yet
     if (!swiper) {
       swiper = new Swiper('.swiper', {
+        // configure Swiper to use modules
+        modules: [Navigation, Pagination],
         // optional parameters
         direction: 'horizontal',
         loop: false,
