@@ -48,8 +48,10 @@
   overflow-y: auto;
 }
 
-.aside-container > :last-child {
-  margin-top: auto;
+.aside-container {
+  & > :last-child {
+    margin-top: auto;
+  }
 }
 
 .aside-header-container {
@@ -94,6 +96,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include respond-to(mobile) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  @include respond-to(tablet) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 .container-item {

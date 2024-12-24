@@ -1,4 +1,12 @@
 .main {
+  @include respond-to(tablet) {
+    padding: 0;
+  }
+
+  @include respond-to(desktop) {
+    padding: 0;
+  }
+
   &__title-wrapper {
     @include respond-to(tablet) {
       padding-top: 2px;
