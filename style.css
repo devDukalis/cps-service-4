@@ -404,9 +404,35 @@ body {
   font-weight: normal;
   font-style: normal; }
 
+/* FLEX */
+/* BUTTONS */
+/* ICONS */
+/* FONTS */
+/* MAIN */
+/* HIGHLIGHT */
+/* SCREEN BREAKPOINTS */
+/* SAFE HEIGHT OF MOBILE TOP / BOTTOM PANELS */
+/* Create responsive styles based on defined breakpoints */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 224px); }
+  @media (min-width: 320px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 224px);
+      row-gap: 16px; } }
+  @media (min-width: 768px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 224px);
+      row-gap: 16px;
+      -moz-column-gap: 24px;
+           column-gap: 24px; } }
+  @media (min-width: 1120px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, 240px);
+      -moz-column-gap: 32px;
+           column-gap: 32px; } }
 
 /* FLEX */
 /* BUTTONS */
@@ -491,21 +517,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media (min-width: 320px) {
+    .container {
+      flex-wrap: nowrap;
+      justify-content: flex-start; } }
+  @media (min-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: flex-start; } }
 
 .container-item {
   display: flex;
   justify-content: space-between;
   align-items: center; }
 
-/* FLEX */
-/* BUTTONS */
-/* ICONS */
-/* FONTS */
-/* MAIN */
-/* HIGHLIGHT */
-/* SCREEN BREAKPOINTS */
-/* SAFE HEIGHT OF MOBILE TOP / BOTTOM PANELS */
-/* Create responsive styles based on defined breakpoints */
 /* BOX-SHADOW */
 .box-shadow {
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02); }
@@ -669,13 +694,10 @@ body {
     .header .header-nav__list .header-nav__list-item .header-nav__list-item-right .header-nav__list-item-right-element.visually-hidden {
       display: none; }
 
-#main-section-wrapper {
-  width: 100%;
-  height: 100%; }
-
 .main {
   background-color: #f8f8f8;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 24px; }
   .main__title-wrapper {
     display: flex;
     align-items: center;
@@ -794,14 +816,6 @@ body {
   height: 100%;
   border-radius: 6px; }
 
-/* FLEX */
-/* BUTTONS */
-/* ICONS */
-/* FONTS */
-/* MAIN */
-/* HIGHLIGHT */
-/* SCREEN BREAKPOINTS */
-/* SAFE HEIGHT OF MOBILE TOP / BOTTOM PANELS */
 .brands-section {
   background-color: #f8f8f8; }
   .brands-section__heading {
@@ -821,67 +835,60 @@ body {
     justify-content: flex-start;
     align-items: center;
     border-top: 1px solid #d9fff5; }
-  .brands-section__list .brands-section__list-item {
+  .brands-section__list:last-child {
+    margin-right: 32px; }
+  .brands-section__list-item {
     border: 1px solid #eaeaea;
     border-radius: 6px;
     background: #ffffff;
     min-width: 224px;
     max-width: 240px; }
-    .brands-section__list .brands-section__list-item:hover {
+    .brands-section__list-item:hover {
       border-color: rgba(128, 128, 128, 0.5); }
-    .brands-section__list .brands-section__list-item:last-child {
-      margin-right: 32px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      margin-right: 16px; }
-      .brands-section__list .brands-section__list-item .brands-section__list-item-link .brands-section__list-item-link-img {
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s ease-in-out; }
-        .brands-section__list .brands-section__list-item .brands-section__list-item-link .brands-section__list-item-link-img:hover {
-          transform: scale(1.2); }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-lenovo-logo,
-    .brands-section__list .brands-section__list-item .brands-section__list-item-samsung-logo,
-    .brands-section__list .brands-section__list-item .brands-section__list-item-apple-logo,
-    .brands-section__list .brands-section__list-item .brands-section__list-item-viewsonic-logo,
-    .brands-section__list .brands-section__list-item .brands-section__list-item-bosh-logo,
-    .brands-section__list .brands-section__list-item .brands-section__list-item-hp-logo,
-    .brands-section__list .brands-section__list-item .brands-section__list-item-acer-logo,
-    .brands-section__list .brands-section__list-item .brands-section__list-item-sony-logo {
-      margin-left: 16px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-lenovo-logo {
-      width: 108px;
-      height: 32px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-samsung-logo {
-      width: 116px;
-      height: 38px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-apple-logo {
-      width: 44px;
-      height: 44px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-viewsonic-logo {
-      width: 128px;
-      height: 21px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-bosh-logo {
-      width: 128px;
-      height: 28px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-hp-logo {
-      width: 52px;
-      height: 52px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-acer-logo {
-      width: 94px;
-      height: 24px; }
-    .brands-section__list .brands-section__list-item .brands-section__list-item-sony-logo {
-      width: 128px;
-      height: 25px; }
+  .brands-section__list-item-lenovo-logo {
+    width: 108px;
+    height: 32px; }
+  .brands-section__list-item-samsung-logo {
+    width: 116px;
+    height: 38px; }
+  .brands-section__list-item-apple-logo {
+    width: 44px;
+    height: 44px; }
+  .brands-section__list-item-viewsonic-logo {
+    width: 128px;
+    height: 21px; }
+  .brands-section__list-item-bosh-logo {
+    width: 128px;
+    height: 28px; }
+  .brands-section__list-item-hp-logo {
+    width: 52px;
+    height: 52px; }
+  .brands-section__list-item-acer-logo {
+    width: 94px;
+    height: 24px; }
+  .brands-section__list-item-sony-logo {
+    width: 128px;
+    height: 25px; }
+  .brands-section__list-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px; }
+  .brands-section__list-item-link-img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out; }
+    .brands-section__list-item-link-img:hover {
+      transform: scale(1.2); }
   .brands-section__pagination {
     display: block;
     justify-content: center;
     align-items: center;
-    width: 204px; }
+    width: 204px;
+    padding-left: 16px;
+    padding-right: 16px; }
   .brands-section__toggle-list-block {
     display: flex;
     justify-content: flex-start;
@@ -895,24 +902,48 @@ body {
       width: -moz-fit-content;
       width: fit-content;
       padding-right: 8px; }
-    .brands-section__toggle-list-block .brands-section__toggle-list-block-img-wrapper {
-      width: 24px;
-      height: 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 9px; }
-      .brands-section__toggle-list-block .brands-section__toggle-list-block-img-wrapper img {
-        width: 7.41px;
-        height: 10.29px; }
-      .brands-section__toggle-list-block .brands-section__toggle-list-block-img-wrapper .brands-section__toggle-list-block-divider {
-        transition: transform 0.3s ease; }
-    .brands-section__toggle-list-block .brands-section__toggle-list-block-btn {
-      color: #1b1c21;
-      font-family: "TTLakes-Medium";
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.2px; }
+  .brands-section__toggle-list-block-img-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9px; }
+    .brands-section__toggle-list-block-img-wrapper img {
+      width: 7.41px;
+      height: 10.29px; }
+  .brands-section__toggle-list-block-divider {
+    transition: transform 0.3s ease; }
+  .brands-section__toggle-list-block-btn {
+    color: #1b1c21;
+    font-family: "TTLakes-Medium";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px; }
+
+.brands-section__list-item-lenovo-logo {
+  margin-left: 16px; }
+
+.brands-section__list-item-samsung-logo {
+  margin-left: 16px; }
+
+.brands-section__list-item-apple-logo {
+  margin-left: 16px; }
+
+.brands-section__list-item-viewsonic-logo {
+  margin-left: 16px; }
+
+.brands-section__list-item-bosh-logo {
+  margin-left: 16px; }
+
+.brands-section__list-item-hp-logo {
+  margin-left: 16px; }
+
+.brands-section__list-item-acer-logo {
+  margin-left: 16px; }
+
+.brands-section__list-item-sony-logo {
+  margin-left: 16px; }
 
 @media (min-width: 1120px) {
   #page-wrapper {
@@ -953,9 +984,13 @@ body {
   .header .header-nav .menu-container {
     padding: 18px 24px; } }
 
+@media (min-width: 768px) {
+  .main {
+    padding: 0; } }
+
 @media (min-width: 1120px) {
-  #main-section-wrapper {
-    flex-basis: calc(100% - 320px); } }
+  .main {
+    padding: 0; } }
 
 @media (min-width: 768px) {
   .main__title-wrapper {
@@ -1001,62 +1036,60 @@ body {
     min-height: 198px;
     min-width: 360px; } }
 
-/* 320p */
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) {
   .brands-section__heading {
-    margin-bottom: 16px; }
+    margin-bottom: 16px; } }
+
+@media (min-width: 768px) {
+  .brands-section__heading {
+    padding: 16px 24px;
+    margin-bottom: 24px; } }
+
+@media (min-width: 1120px) {
+  .brands-section__heading {
+    padding: 16px 32px; } }
+
+@media (min-width: 320px) {
   .brands-section__list {
     margin-left: 16px;
-    margin-bottom: 16px; }
+    margin-bottom: 16px; } }
+
+@media (min-width: 768px) {
+  .brands-section__list {
+    margin-left: 24px;
+    margin-bottom: 24px; } }
+
+@media (min-width: 1120px) {
+  .brands-section__list {
+    margin-left: 32px; } }
+
+@media (min-width: 320px) {
   .brands-section__list-item {
     min-width: 240px;
-    max-width: 240px; }
+    max-width: 240px; } }
+
+@media (min-width: 768px) {
+  .brands-section__list-item {
+    min-width: 224px;
+    max-width: 224px; } }
+
+@media (min-width: 1120px) {
+  .brands-section__list-item {
+    min-width: 240px;
+    max-width: 240px; } }
+
+@media (min-width: 320px) {
   .brands-section__pagination {
     margin-bottom: 38px; } }
 
-/* 768p */
 @media (min-width: 768px) {
-  .brands-section__heading {
-    margin-bottom: 24px; }
-  .brands-section__list {
-    margin-left: 24px;
-    margin-bottom: 24px; }
-  .brands-section__heading {
-    padding: 16px 24px;
-    margin-bottom: 24px; }
-  .brands-section__list {
-    margin-bottom: 24px; }
-  .brands-section__list-item {
-    min-width: 224px;
-    max-width: 224px; }
   .brands-section__toggle-list-block {
     margin-left: 24px;
-    margin-bottom: 34px; }
-  .container {
-    flex-wrap: wrap;
-    justify-content: flex-start; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 224px);
-    row-gap: 16px;
-    -moz-column-gap: 24px;
-         column-gap: 24px; } }
+    margin-bottom: 34px; } }
 
-/* 1120p */
 @media (min-width: 1120px) {
-  .brands-section__heading {
-    padding: 16px 32px; }
-  .brands-section__list {
-    margin-left: 32px; }
-  .brands-section__list-item {
-    min-width: 240px;
-    max-width: 240px; }
   .brands-section__toggle-list-block {
-    margin-left: 32px; }
-  .grid {
-    grid-template-columns: repeat(auto-fit, 240px);
-    -moz-column-gap: 32px;
-         column-gap: 32px; } }
+    margin-left: 32px; } }
 
 /* FLEX */
 /* BUTTONS */
