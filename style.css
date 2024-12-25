@@ -531,6 +531,25 @@ body {
   justify-content: space-between;
   align-items: center; }
 
+/* DEVICE TYPES */
+.device-types-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media (min-width: 320px) {
+    .device-types-container {
+      flex-wrap: nowrap;
+      justify-content: flex-start; } }
+  @media (min-width: 768px) {
+    .device-types-container {
+      flex-wrap: wrap;
+      justify-content: flex-start; } }
+
+.device-types-container-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
 /* BOX-SHADOW */
 .box-shadow {
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02); }
@@ -945,6 +964,107 @@ body {
 .brands-section__list-item-sony-logo {
   margin-left: 16px; }
 
+/* FLEX */
+/* BUTTONS */
+/* ICONS */
+/* FONTS */
+/* MAIN */
+/* HIGHLIGHT */
+/* SCREEN BREAKPOINTS */
+/* SAFE HEIGHT OF MOBILE TOP / BOTTOM PANELS */
+.device-types {
+  background-color: #f8f8f8; }
+  .device-types__heading {
+    margin: 0;
+    padding: 16px;
+    min-height: 56px;
+    max-height: 80px;
+    color: #7e7e82;
+    text-transform: uppercase;
+    font-family: "TTLakes-Regular";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background: linear-gradient(90deg, #f8f8f8, #ffffff);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid #d9fff5; }
+  .device-types__list:last-child {
+    margin-right: 32px; }
+  .device-types__list-item {
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    background: #ffffff;
+    min-width: 240px;
+    max-width: 240px;
+    height: 160px; }
+    .device-types__list-item:hover {
+      border-color: rgba(128, 128, 128, 0.5); }
+  .device-types__list-item-title {
+    font-family: "TTLakes-Medium";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-left: 16px;
+    display: flex;
+    align-self: flex-start; }
+  .device-types__list-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    margin-bottom: 16px; }
+  .device-types__list-item-link-img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out; }
+    .device-types__list-item-link-img:hover {
+      transform: scale(1.2); }
+  .device-types__pagination {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 204px;
+    padding-left: 16px;
+    padding-right: 16px; }
+  .device-types__toggle-list-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100px;
+    max-width: 160px; }
+    .device-types__toggle-list-block:hover {
+      color: rgba(27, 28, 33, 0.8);
+      box-shadow: 0 0 2px 1px rgba(128, 128, 128, 0.5);
+      border-radius: 3px;
+      width: -moz-fit-content;
+      width: fit-content;
+      padding-right: 8px; }
+  .device-types__toggle-list-block-img-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9px; }
+    .device-types__toggle-list-block-img-wrapper img {
+      width: 7.41px;
+      height: 10.29px; }
+  .device-types__toggle-list-block-divider {
+    transition: transform 0.3s ease; }
+  .device-types__toggle-list-block-btn {
+    color: #1b1c21;
+    font-family: "TTLakes-Medium";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px; }
+
 @media (min-width: 1120px) {
   #page-wrapper {
     display: flex; } }
@@ -1089,6 +1209,61 @@ body {
 
 @media (min-width: 1120px) {
   .brands-section__toggle-list-block {
+    margin-left: 32px; } }
+
+@media (min-width: 320px) {
+  .device-types__heading {
+    margin-bottom: 16px; } }
+
+@media (min-width: 768px) {
+  .device-types__heading {
+    padding: 16px 24px;
+    margin-bottom: 24px; } }
+
+@media (min-width: 1120px) {
+  .device-types__heading {
+    padding: 16px 32px; } }
+
+@media (min-width: 320px) {
+  .device-types__list {
+    margin-left: 16px;
+    margin-bottom: 16px; } }
+
+@media (min-width: 768px) {
+  .device-types__list {
+    margin-left: 24px;
+    margin-bottom: 24px; } }
+
+@media (min-width: 1120px) {
+  .device-types__list {
+    margin-left: 32px; } }
+
+@media (min-width: 320px) {
+  .device-types__list-item {
+    min-width: 240px;
+    max-width: 240px; } }
+
+@media (min-width: 768px) {
+  .device-types__list-item {
+    min-width: 224px;
+    max-width: 224px; } }
+
+@media (min-width: 1120px) {
+  .device-types__list-item {
+    min-width: 240px;
+    max-width: 240px; } }
+
+@media (min-width: 320px) {
+  .device-types__pagination {
+    margin-bottom: 38px; } }
+
+@media (min-width: 768px) {
+  .device-types__toggle-list-block {
+    margin-left: 24px;
+    margin-bottom: 34px; } }
+
+@media (min-width: 1120px) {
+  .device-types__toggle-list-block {
     margin-left: 32px; } }
 
 /* FLEX */
