@@ -113,3 +113,26 @@
   justify-content: space-between;
   align-items: center;
 }
+
+/* DEVICE TYPES */
+.device-types-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to(mobile) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  @include respond-to(tablet) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.device-types-container-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

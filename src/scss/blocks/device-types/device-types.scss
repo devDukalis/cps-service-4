@@ -1,0 +1,126 @@
+@import 'variables.scss';
+
+.device-types {
+  background-color: $bg-color-main;
+
+  &__heading {
+    margin: 0;
+    padding: 16px;
+    min-height: 56px;
+    max-height: 80px;
+    color: map-get(map-get($fonts, color), second);
+    text-transform: uppercase;
+    font-family: map-get(map-get($fonts, family), regular);
+    font-size: map-get(map-get($fonts, size), base);
+    font-weight: 500;
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+    background: linear-gradient(90deg, #f8f8f8, #ffffff);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid #d9fff5;
+  }
+
+  &__list {
+    &:last-child {
+      margin-right: 32px;
+    }
+  }
+
+  &__list-item {
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    background: #ffffff;
+    min-width: 240px;
+    max-width: 240px;
+    height: 160px;
+
+    &:hover {
+      border-color: rgba(128, 128, 128, 0.5);
+    }
+  }
+
+  &__list-item-title {
+    font-family: map-get(map-get($fonts, family), medium);
+    font-size: map-get(map-get($fonts, size), base);
+    font-weight: bold;
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+    margin-left: 16px;
+    display: flex;
+    align-self: flex-start;
+  }
+
+  &__list-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__list-item-link-img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__pagination {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 204px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__toggle-list-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100px;
+    max-width: 160px;
+
+    &:hover {
+      color: rgba(27, 28, 33, 0.8);
+      box-shadow: 0 0 2px 1px rgba(128, 128, 128, 0.5);
+      border-radius: 3px;
+      width: fit-content;
+      padding-right: 8px;
+    }
+  }
+
+  &__toggle-list-block-img-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9px;
+
+    img {
+      width: 7.41px;
+      height: 10.29px;
+    }
+  }
+
+  &__toggle-list-block-divider {
+    transition: transform 0.3s ease;
+  }
+
+  &__toggle-list-block-btn {
+    color: map-get(map-get($fonts, color), main);
+    font-family: map-get(map-get($fonts, family), medium);
+    font-size: map-get(map-get($fonts, size), base);
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+  }
+}

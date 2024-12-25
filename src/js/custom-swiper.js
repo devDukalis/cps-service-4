@@ -1,76 +1,67 @@
 import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
 
-let swiper
+let swipers = []
 
 function isMobile() {
-  let screenWidth = window.innerWidth
-  return screenWidth < 768
+  return window.innerWidth < 768
 }
 
-function initSwiperMobile() {
+function initSwipers() {
+  // destroy all existing swiper instances
+  swipers.forEach((swiper) => swiper.destroy())
+  swipers = [] // clear array
+
   if (isMobile()) {
-    // Initialize swiper only if it wasn't initialized yet
-    if (!swiper) {
-      swiper = new Swiper('.swiper', {
-        // configure Swiper to use modules
+    // initialize all new swipers
+    const swiperElements = document.querySelectorAll('.swiper')
+    swiperElements.forEach((element) => {
+      const swiper = new Swiper(element, {
         modules: [Navigation, Pagination],
-        // optional parameters
         direction: 'horizontal',
         loop: false,
-
-        // sliding
         slidesPerView: 'auto',
-        spaceBetween: 16, // Set default space between slides
-
-        // pagination
+        spaceBetween: 16,
         pagination: {
-          el: '.swiper-pagination',
+          el: element.querySelector('.swiper-pagination'),
           clickable: true
         },
-
-        // navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: element.querySelector('.swiper-button-next'),
+          prevEl: element.querySelector('.swiper-button-prev')
         },
-
-        // scrollbar
         scrollbar: {
-          el: '.swiper-scrollbar'
+          el: element.querySelector('.swiper-scrollbar')
         }
       })
-    }
-  } else {
-    // Destroy swiper if it exists
-    if (swiper) {
-      swiper.destroy()
-      swiper = null // Reset swiper
-    }
+      swipers.push(swiper) // add new swiper to array
+    })
   }
 }
 
-// Init swiper on page load
-initSwiperMobile()
+// initialize swipers on page load
+initSwipers()
 
-// Add event listener for window resize
-window.addEventListener('resize', initSwiperMobile)
+// add event listener for window resize
+window.addEventListener('resize', initSwipers)
 
 /* TOGGLE SWIPER PAGINATION VISIBILITY */
 function toggleSwiperPagination() {
-  const pagination = document.getElementById('swiper-pagination-block')
+  const paginations = document.querySelectorAll('.swiper-pagination')
 
-  if (window.innerWidth >= 768) {
-    pagination.style.display = 'none' // Hide pagination
-  } else {
-    pagination.style.display = '' // Show pagination
-  }
+  paginations.forEach((pagination) => {
+    if (window.innerWidth >= 768) {
+      pagination.style.display = 'none' // hide pagination
+    } else {
+      pagination.style.display = '' // display pagination
+    }
+  })
 }
 
-// Initial check
+// initial check
 toggleSwiperPagination()
 
-// Add event listener for window resize
+// add event listener for window resize
 window.addEventListener('resize', toggleSwiperPagination)
 
 /* DISPLAY SWIPER SLIDES TOGGLE BUTTON */
@@ -78,60 +69,102 @@ function toggleSwiperSlidesBtn() {
   const toggleSwiperSlidesBtnBlock = document.getElementById(
     'toggle-slides-btn-block'
   )
+  const toggleSwiperDeviceSlidesBtnBlock = document.getElementById(
+    'toggle-device-slides-btn-block'
+  )
 
   if (window.innerWidth >= 768) {
     toggleSwiperSlidesBtnBlock.classList.remove('visually-hidden')
+    toggleSwiperDeviceSlidesBtnBlock.classList.remove('visually-hidden')
   } else {
     toggleSwiperSlidesBtnBlock.classList.add('visually-hidden')
+    toggleSwiperDeviceSlidesBtnBlock.classList.add('visually-hidden')
   }
 }
 
-// Initial check
+// initial check
 toggleSwiperSlidesBtn()
 
-// Add event listener for window resize
+// add event listener for window resize
 window.addEventListener('resize', toggleSwiperSlidesBtn)
 
-/* TOGGLE SWIPER SLIDES */
-document.addEventListener('DOMContentLoaded', function () {
-  const slidesBtn = document.getElementById('toggle-btn-slides')
+/* TOGGLE SWIPER SLIDES OF BRANDS */
+document.addEventListener('DOMContentLoaded', () => {
+  const slidesButton = document.getElementById('toggle-btn-slides')
   const slides = document.querySelectorAll('.brands-section__list-item')
-  let slidesVisible = false
+  let areSlidesVisible = false
 
-  function updateSlidesVisibility() {
-    const screenWidth = window.innerWidth
-    let slidesToShow = 0
-
-    // number of slides to display depends on screen width
-    if (screenWidth >= 768 && screenWidth < 1120) {
-      slidesToShow = 6
-    } else if (screenWidth >= 1120) {
-      slidesToShow = 8
-    }
-
-    slides.forEach((slide, i) => {
-      // if screen width less than 768 then display all slides
-      if (screenWidth < 768) {
-        slide.style.display = 'flex'
-      } else if (i < slidesToShow || slidesVisible) {
-        slide.style.display = 'flex'
-      } else {
-        slide.style.display = 'none'
-      }
-    })
-
-    // Toggle button text
-    slidesBtn.textContent = slidesVisible ? 'Скрыть' : 'Показать все'
+  const getSlidesToShow = (screenWidth) => {
+    if (screenWidth < 768) return slides.length // show all slides
+    if (screenWidth < 1120) return 6 // show 6 slides
+    return 8 // show 8 slides
   }
 
-  function toggleSwiperSlides() {
-    slidesVisible = !slidesVisible
+  const updateSlidesVisibility = () => {
+    const screenWidth = window.innerWidth
+    const slidesToShow = getSlidesToShow(screenWidth)
+
+    slides.forEach((slide, index) => {
+      slide.style.display =
+        screenWidth < 768 || index < slidesToShow || areSlidesVisible
+          ? 'flex'
+          : 'none'
+    })
+
+    slidesButton.textContent = areSlidesVisible ? 'Скрыть' : 'Показать все'
+  }
+
+  const toggleSlidesVisibility = () => {
+    areSlidesVisible = !areSlidesVisible
     updateSlidesVisibility()
   }
 
-  slidesBtn.addEventListener('click', toggleSwiperSlides)
+  slidesButton.addEventListener('click', toggleSlidesVisibility)
   window.addEventListener('resize', updateSlidesVisibility)
 
-  // Initialize slides visibility on page load
+  // initialize slides visibility on page load
   updateSlidesVisibility()
+})
+
+/* TOGGLE SWIPER SLIDES OF DEVICE TYPES */
+document.addEventListener('DOMContentLoaded', function () {
+  const deviceSlidesBtn = document.getElementById('toggle-btn-device-slides')
+  const deviceSlides = document.querySelectorAll('.device-types__list-item')
+  let slidesVisible = false
+
+  function getSlidesToShow(screenWidth) {
+    if (screenWidth < 768) return deviceSlides.length // Show all slides
+    if (screenWidth >= 1665) return 5
+    if (screenWidth >= 1400) return 4
+    if (screenWidth >= 1120) return 3
+    if (screenWidth >= 1000) return 4
+    if (screenWidth >= 768) return 3
+    return 0 // Fallback
+  }
+
+  function updateDeviceSlidesVisibility() {
+    const screenWidth = window.innerWidth
+    const slidesToShow = getSlidesToShow(screenWidth)
+
+    deviceSlides.forEach((deviceSlide, index) => {
+      deviceSlide.style.display =
+        screenWidth < 768 || index < slidesToShow || slidesVisible
+          ? 'flex'
+          : 'none'
+    })
+
+    // Update button text based on visibility state
+    deviceSlidesBtn.textContent = slidesVisible ? 'Скрыть' : 'Показать все'
+  }
+
+  function toggleDeviceSwiperSlides() {
+    slidesVisible = !slidesVisible
+    updateDeviceSlidesVisibility()
+  }
+
+  deviceSlidesBtn.addEventListener('click', toggleDeviceSwiperSlides)
+  window.addEventListener('resize', updateDeviceSlidesVisibility)
+
+  // Initialize slides visibility on page load
+  updateDeviceSlidesVisibility()
 })
