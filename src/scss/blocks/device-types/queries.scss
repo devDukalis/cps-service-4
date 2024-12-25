@@ -1,0 +1,66 @@
+.device-types {
+  &__heading {
+    @include respond-to(mobile) {
+      margin-bottom: 16px;
+    }
+
+    @include respond-to(tablet) {
+      padding: 16px 24px;
+      margin-bottom: 24px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 16px 32px;
+    }
+  }
+
+  &__list {
+    @include respond-to(mobile) {
+      margin-left: 16px;
+      margin-bottom: 16px;
+    }
+
+    @include respond-to(tablet) {
+      margin-left: 24px;
+      margin-bottom: 24px;
+    }
+
+    @include respond-to(desktop) {
+      margin-left: 32px;
+    }
+  }
+
+  &__list-item {
+    @include respond-to(mobile) {
+      min-width: 240px;
+      max-width: 240px;
+    }
+
+    @include respond-to(tablet) {
+      min-width: 224px;
+      max-width: 224px;
+    }
+
+    @include respond-to(desktop) {
+      min-width: 240px;
+      max-width: 240px;
+    }
+  }
+
+  &__pagination {
+    @include respond-to(mobile) {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__toggle-list-block {
+    @include respond-to(tablet) {
+      margin-left: 24px;
+      margin-bottom: 34px;
+    }
+
+    @include respond-to(desktop) {
+      margin-left: 32px;
+    }
+  }
+}
