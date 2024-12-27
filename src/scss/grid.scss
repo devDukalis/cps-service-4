@@ -20,3 +20,26 @@
     column-gap: 32px;
   }
 }
+
+.service-prices-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 116px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.service-prices__table-columns {
+  display: contents;
+}
+
+.service-prices__table-rows {
+  display: contents;
+}
+
+.service-prices__table-body {
+  display: contents;
+}
+
+.service-prices__table-body-row {
+  display: contents;
+}

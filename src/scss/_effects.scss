@@ -32,7 +32,8 @@
 .aside-footer-contacts-options__btn,
 .header-nav__list-item-left-element-btn,
 .header-nav__list-item-right-element-btn,
-.title-right-container__item-image {
+.title-right-container__item-image,
+.service-prices__table-body-row-data-btn {
   transition: transform 0.3s ease-in-out;
 }
 
@@ -40,7 +41,8 @@
 .aside-footer-contacts-options__btn:hover,
 .header-nav__list-item-left-element-btn:hover,
 .header-nav__list-item-right-element-btn:hover,
-.title-right-container__item-image:hover {
+.title-right-container__item-image:hover,
+.service-prices__table-body-row-data-btn:hover {
   transform: scale(1.2);
 }
 

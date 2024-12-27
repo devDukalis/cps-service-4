@@ -1,0 +1,95 @@
+@import 'variables.scss';
+
+.service-prices {
+  background-color: $bg-color-main;
+
+  &__heading {
+    margin: 0;
+    padding: 16px;
+    min-height: 56px;
+    max-height: 80px;
+    color: map-get(map-get($fonts, color), second);
+    text-transform: uppercase;
+    font-family: map-get(map-get($fonts, family), regular);
+    font-size: map-get(map-get($fonts, size), base);
+    font-weight: 500;
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+    background: linear-gradient(90deg, #f8f8f8, #ffffff);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid #d9fff5;
+  }
+
+  &__table {
+    background-color: $bg-color-second;
+    border-radius: 6px;
+    padding: 16px 23px;
+  }
+
+  &__table-cell {
+    color: map-get(map-get($fonts, color), second);
+    font-family: map-get(map-get($fonts, family), medium);
+    font-size: map-get(map-get($fonts, size), small);
+    line-height: map-get(map-get($fonts, line-height), smaller);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), zero);
+    opacity: 0.72;
+    border-bottom: 1px solid $border-color--second;
+    padding: 16px 0px;
+  }
+
+  &__table-body-row {
+    &:last-child {
+      .service-prices__table-body-row-data {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__table-body-row-data {
+    color: map-get(map-get($fonts, color), main);
+    font-family: map-get(map-get($fonts, family), regular);
+    font-size: map-get(map-get($fonts, size), small);
+    line-height: map-get(map-get($fonts, line-height), small);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), small);
+    padding: 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid $border-color--second;
+
+    & td:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__table-body-row-data-btn {
+    width: 119px;
+    height: 32px;
+    background-color: $btn-color--main;
+    color: $bg-color-second;
+    border-radius: 50px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 8px;
+    font-family: map-get(map-get($fonts, family), bold);
+    font-size: map-get(map-get($fonts, size), smaller);
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), smaller);
+  }
+
+  &__table-body-row-data-img {
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: 54%;
+    border: 2px solid $btn-color--main;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+}

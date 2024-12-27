@@ -5,6 +5,7 @@ $nav-menu-padding-second: 18px 24px;
 /* BUTTONS */
 $menu-btn-width: 40px;
 $menu-btn-height: 40px;
+$btn-color--main: #ff3e79;
 
 /* ICONS */
 $menu-icon-width: 95px;
@@ -22,17 +23,21 @@ $fonts: (
     base: 16px,
     large: 28px,
     small: 14px,
-    big: 24px
+    big: 24px,
+    smaller: 12px
   ),
   line-height: (
     main: 40px,
     second: 24px,
-    small: 18px
+    small: 18px,
+    smaller: 16px
   ),
   letter-spacing: (
     main: -0.6px,
     second: -0.2px,
-    small: 0.2px
+    small: 0.2px,
+    zero: 0px,
+    smaller: -0.15px
   ),
   color: (
     main: #1b1c21,
@@ -50,6 +55,7 @@ $item-height: 34px;
 /* HIGHLIGHT */
 $bg-color-second: #ffffff;
 $border-color-main: #b8ffec;
+$border-color--second: #eaeaea;
 $border-radius-main: 6px;
 
 /* SCREEN BREAKPOINTS */
