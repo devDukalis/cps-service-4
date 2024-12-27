@@ -1,0 +1,16 @@
+.service-prices {
+  &__heading {
+    @include respond-to(mobile) {
+      margin-bottom: 16px;
+    }
+
+    @include respond-to(tablet) {
+      padding: 16px 24px;
+      margin-bottom: 24px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 16px 32px;
+    }
+  }
+}
