@@ -49,24 +49,3 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-table,
-thead,
-tbody,
-tfoot,
-tr,
-th,
-td {
-  width: auto;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-collapse: inherit;
-  border-spacing: 0;
-  border-color: inherit;
-  text-align: left;
-  font-weight: inherit;
-  -webkit-border-horizontal-spacing: 0;
-  -webkit-border-vertical-spacing: 0;
-}
