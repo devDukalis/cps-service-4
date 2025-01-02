@@ -1,0 +1,169 @@
+@import 'variables.scss';
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-color-main;
+
+  &__heading {
+    margin: 0;
+    padding: 16px;
+    min-height: 56px;
+    max-height: 80px;
+    color: map-get(map-get($fonts, color), second);
+    text-transform: uppercase;
+    font-family: map-get(map-get($fonts, family), regular);
+    font-size: map-get(map-get($fonts, size), base);
+    font-weight: 500;
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+    background: linear-gradient(90deg, #f8f8f8, #ffffff);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid #d9fff5;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  &__table {
+    background-color: $bg-color-main;
+    border-radius: 0 0 6px 6px;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.6fr;
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 16px;
+    width: 100%;
+  }
+
+  &__row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.6fr;
+    gap: 20px;
+    align-items: center;
+    padding: 24px 16px;
+    border: 1px solid transparent;
+  }
+
+  &__cell-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &--with-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__cell-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__column-title {
+    color: map-get(map-get($fonts, color), second);
+    font-family: map-get(map-get($fonts, family), medium);
+    font-size: map-get(map-get($fonts, size), small);
+    line-height: map-get(map-get($fonts, line-height), smaller);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), zero);
+    font-weight: normal;
+    opacity: 0.72;
+    margin: 0;
+  }
+
+  &__cell {
+    color: map-get(map-get($fonts, color), main);
+    font-family: map-get(map-get($fonts, family), regular);
+    font-size: map-get(map-get($fonts, size), small);
+    line-height: map-get(map-get($fonts, line-height), small);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), small);
+  }
+
+  &__order-btn {
+    background-color: $btn-color--main;
+    color: $bg-color-second;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: map-get(map-get($fonts, family), bold);
+    font-size: map-get(map-get($fonts, size), smaller);
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), smaller);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 119px;
+    height: 32px;
+    padding: 0 8px 0 12px;
+    border: none;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      background-image: url('../img/dropdown.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+    }
+  }
+
+  &__disclaimer {
+    min-width: 288px;
+    max-width: 421px;
+    color: map-get(map-get($fonts, color), main);
+    font-family: map-get(map-get($fonts, family), regular);
+    font-size: map-get(map-get($fonts, size), small);
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: map-get(map-get($fonts, letter-spacing), small);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__proposal {
+    color: map-get(map-get($fonts, color), main);
+    font-family: map-get(map-get($fonts, family), medium);
+    font-size: map-get(map-get($fonts, size), base);
+    font-weight: 500;
+    opacity: 1;
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__proposal-link {
+    display: inline-block;
+    font-size: map-get(map-get($fonts, size), base);
+    line-height: map-get(map-get($fonts, line-height), second);
+    letter-spacing: map-get(map-get($fonts, letter-spacing), second);
+    color: map-get(map-get($fonts, color), main);
+    font-weight: bold;
+  }
+
+  &__proposal-link-img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: url('../img/dropdown.svg') no-repeat 50% 50%;
+    filter: brightness(0) saturate(100%) invert(36%) sepia(100%) saturate(1000%)
+      hue-rotate(330deg) brightness(100%) contrast(100%);
+  }
+}

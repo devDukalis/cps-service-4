@@ -33,7 +33,8 @@
 .header-nav__list-item-left-element-btn,
 .header-nav__list-item-right-element-btn,
 .title-right-container__item-image,
-.service-prices__table-body-row-data-btn {
+.service-prices__table-body-row-data-btn,
+.prices__order-btn {
   transition: transform 0.3s ease-in-out;
 }
 
@@ -42,7 +43,8 @@
 .header-nav__list-item-left-element-btn:hover,
 .header-nav__list-item-right-element-btn:hover,
 .title-right-container__item-image:hover,
-.service-prices__table-body-row-data-btn:hover {
+.service-prices__table-body-row-data-btn:hover,
+.prices__order-btn:hover {
   transform: scale(1.2);
 }
 
