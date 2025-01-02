@@ -146,4 +146,22 @@
       }
     }
   }
+
+  &__disclaimer {
+    @include respond-to(tablet) {
+      padding: 0;
+    }
+  }
+
+  &__proposal {
+    @include respond-to(tablet) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @include respond-to(desktop) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
 }
