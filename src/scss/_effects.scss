@@ -4,7 +4,7 @@
     -2px 0px 4px rgba(69, 79, 126, 0.02);
 }
 
-/* COLOR */
+/* COLOR OF ACTIVE LANGUAGE*/
 .active-lang {
   color: map-get(map-get($fonts, color), second);
 }
@@ -14,11 +14,11 @@
   position: relative;
 }
 
-.aside-nav-list__item-btn:hover {
+.aside-nav-list__item-btn.active {
   color: var(--font-second-color);
 }
 
-.aside-nav-list__item-btn:hover::before {
+.aside-nav-list__item-btn.active::before {
   content: '';
   position: absolute;
   background-image: url('../img/highlight.svg');

@@ -41,18 +41,6 @@ showTitleRightContainer()
 
 window.addEventListener('resize', showTitleRightContainer)
 
-/* SELECT / DESELECT SERVICES */
-document.addEventListener('DOMContentLoaded', function () {
-  const listItems = document.querySelectorAll('.nav-services__list-item')
-
-  listItems.forEach((item) => {
-    item.addEventListener('click', function () {
-      listItems.forEach((li) => li.classList.remove('active'))
-      this.classList.add('active')
-    })
-  })
-})
-
 /* TOGGLE BURGER MENU */
 document.addEventListener('DOMContentLoaded', function () {
   const burgerMenu = document.getElementById('burger')
