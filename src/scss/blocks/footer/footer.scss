@@ -1,0 +1,48 @@
+.footer {
+  color: map-get(map-get($fonts, color), second);
+  font-family: map-get(map-get($fonts, family), medium);
+  font-size: map-get(map-get($fonts, size), small);
+  line-height: map-get(map-get($fonts, line-height), smaller);
+  letter-spacing: map-get(map-get($fonts, letter-spacing), zero);
+  opacity: 0.72;
+  background-color: $bg-color-main;
+  padding-bottom: 19px;
+  border-top: 1px solid #d9fff5;
+
+  @include respond-to(mobile) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @include respond-to(tablet) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include respond-to(desktop) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  &__copyright {
+    flex: 1;
+
+    @include respond-to(tablet) {
+      text-align: left;
+    }
+  }
+  &__privacy-policy {
+    flex: 1;
+
+    @include respond-to(tablet) {
+      text-align: center;
+    }
+  }
+  &__disclaimer {
+    flex: 1;
+
+    @include respond-to(tablet) {
+      text-align: right;
+    }
+  }
+}
