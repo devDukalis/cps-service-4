@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* TOGGLE SWIPER SLIDES OF DEVICE TYPES */
 document.addEventListener('DOMContentLoaded', function () {
   const deviceSlidesBtn = document.getElementById('toggle-btn-device-slides')
-  const deviceSlides = document.querySelectorAll('.device-types__list-item')
+  const deviceSlides = document.querySelectorAll('.devices__list-item')
   let slidesVisible = false
 
   function getSlidesToShow(screenWidth) {
