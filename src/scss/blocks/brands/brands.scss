@@ -1,7 +1,7 @@
 @import '../brands/variables.scss';
 @import 'variables.scss';
 
-.brands-section {
+.brands {
   background-color: $bg-color-main;
 
   &__heading {
@@ -153,7 +153,7 @@
 }
 
 @each $brand in $brands {
-  .brands-section__list-item-#{$brand}-logo {
+  .brands__list-item-#{$brand}-logo {
     margin-left: 16px;
   }
 }
