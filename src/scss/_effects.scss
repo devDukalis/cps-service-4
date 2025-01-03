@@ -14,11 +14,11 @@
   position: relative;
 }
 
-.aside-nav-list__item-btn:hover {
+.aside-nav-list__item-btn.active {
   color: var(--font-second-color);
 }
 
-.aside-nav-list__item-btn:hover::before {
+.aside-nav-list__item-btn.active::before {
   content: '';
   position: absolute;
   background-image: url('../img/highlight.svg');
