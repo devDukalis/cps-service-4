@@ -12,25 +12,27 @@
 
   &__list-item {
     height: $item-height;
-    padding-left: $main-padding;
-    padding-right: $main-padding;
     white-space: nowrap;
     display: flex;
+    padding-left: $main-padding;
+    padding-right: $main-padding;
 
     &:hover {
       background-color: $bg-color-second;
       border-radius: $border-radius-main;
       outline: 2px solid $border-color-main;
     }
+
+    &--active {
+      background-color: $bg-color-second;
+      border-radius: $border-radius-main;
+      outline: 2px solid $border-color-main;
+    }
   }
 
-  .active {
-    background-color: $bg-color-second;
-    border-radius: $border-radius-main;
-    outline: 2px solid $border-color-main;
-  }
-
-  &__list-item-btn {
+  &__list-item-link {
+    display: flex;
+    align-items: center;
     font-family: map-get(map-get($fonts, family), medium),
       map-get(map-get($fonts, family), fallback);
     color: map-get(map-get($fonts, color), second);

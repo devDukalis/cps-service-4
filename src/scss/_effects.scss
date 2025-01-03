@@ -4,7 +4,7 @@
     -2px 0px 4px rgba(69, 79, 126, 0.02);
 }
 
-/* COLOR */
+/* COLOR OF ACTIVE LANGUAGE*/
 .active-lang {
   color: map-get(map-get($fonts, color), second);
 }
